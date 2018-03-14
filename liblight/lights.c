@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014, 2017 The  Linux Foundation. All rights reserved.
+ * Copyright (C) 2014, 2017-2018 The  Linux Foundation. All rights reserved.
  * Not a contribution
  * Copyright (C) 2008 The Android Open Source Project
  *
@@ -225,15 +225,15 @@ set_speaker_light_locked(struct light_device_t* dev,
         if (red) {
             if (write_int(RED_BLINK_FILE, blink))
                 write_int(RED_LED_FILE, 0);
-    }
+        }
         if (green) {
             if (write_int(GREEN_BLINK_FILE, blink))
                 write_int(GREEN_LED_FILE, 0);
-    }
+        }
         if (blue) {
             if (write_int(BLUE_BLINK_FILE, blink))
                 write_int(BLUE_LED_FILE, 0);
-    }
+        }
     } else {
         write_int(RED_LED_FILE, red);
         write_int(GREEN_LED_FILE, green);
