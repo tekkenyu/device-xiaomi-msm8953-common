@@ -111,6 +111,9 @@ ro.gps.agps_provider=1
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.opa.eligible_device=true
 
+# HW Keys
+qemu.hw.mainkeys=1
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
