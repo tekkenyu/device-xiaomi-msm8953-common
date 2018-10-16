@@ -165,11 +165,12 @@ TARGET_INIT_VENDOR_LIB := libinit_msm8953
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8953
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(VENDOR_PATH)/lineagehw|**/*.java
-
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
+
+# Key disabler
+JAVA_SOURCE_OVERLAYS := \
+    org.pixelexperience.keydisabler|$(VENDOR_PATH)/keydisabler|**/*.java
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
