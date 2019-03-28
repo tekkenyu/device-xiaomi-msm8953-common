@@ -9,20 +9,30 @@ dalvik.vm.image-dex2oat-filter=speed
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-af.fast_track_multiplier=2 \
+af.fast_track_multiplier=1 \
 audio.deep_buffer.media=true \
-audio.offload.disable=true \
+audio.offload.disable=1 \
 audio.offload.min.duration.secs=30 \
-audio.offload.video=true \
+
 ro.config.media_vol_steps=25 \
 ro.config.vc_call_vol_steps=7 \
-persist.vendor.btstack.enable.splita2dp=false \
+audio.offload.video=false \
+persist.audio.fluence.speaker=false \
+persist.vendor.audio.fluence.speaker=false \
+persist.vendor.audio.fluence.voicecall=true \
+persist.vendor.audio.fluence.voicerec=false \
+persist.vendor.audio.speaker.prot.enable=false \
+persist.vendor.bt.enable.splita2dp=false \
+ro.qc.sdk.audio.fluencetype=fluence \
+ro.vendor.audio.sdk.fluencetype=fluence \
 ro.vendor.audio.sdk.ssr=false \
 vendor.audio.flac.sw.decoder.24bit=true \
+vendor.audio.hw.aac.encoder=true \
 vendor.audio.offload.buffer.size.kb=64 \
 vendor.audio.offload.gapless.enabled=true \
 vendor.audio.offload.multiaac.enable=true \
 vendor.audio.offload.multiple.enabled=false \
+vendor.audio.offload.passthrough=false \
 vendor.audio.offload.track.enable=true \
 vendor.audio.parser.ip.buffer.size=0 \
 vendor.audio.playback.mch.downsample=true \
@@ -36,7 +46,8 @@ vendor.voice.conc.fallbackpath=deep-buffer \
 vendor.voice.path.for.pcm.voip=true \
 vendor.voice.playback.conc.disabled=true \
 vendor.voice.record.conc.disabled=false \
-vendor.voice.voip.conc.disabled=true
+vendor.voice.voip.conc.disabled=true \
+persist.audio.dirac.speaker=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -115,25 +126,18 @@ persist.loc.nlp_name=com.qualcomm.location \
 ro.gps.agps_provider=1
 
 # Media
-PRODUCT_PROPERTY_OVERRIDES += \
-av.debug.disable.pers.cache=1 \
-debug.sf.enable_hwc_vds=1 \
-media.aac_51_output_enabled=true \
+PRODUCT_PROPERTY_OVERRIDES += \ 
+debug.sf.enable_hwc_vds=1 \ 
 media.msm8956hw=0 \
-media.stagefright.audio.sink=280 \
-vendor.mm.enable.qcom_parser=1048575 \
 mm.enable.smoothstreaming=true \
 mmp.enable.3g2=true \
-vendor.audio.hw.aac.encoder=true \
-vendor.vidc.dec.downscalar_height=1088 \
-vendor.vidc.dec.downscalar_width=1920 \
 vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
-vendor.vidc.enc.disable_bframes=1 \
-vendor.video.disable.ubwc=1
 vendor.display.enable_default_color_mode=1 \
-vendor.gralloc.enable_fb_ubwc=1 \
-vendor.video.disable.ubwc=1
+media.aac_51_output_enabled=true \
+media.stagefright.audio.sink=280 \
+mm.enable.qcom_parser=17825791 \
+video.disable.ubwc=1
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
