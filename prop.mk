@@ -13,7 +13,6 @@ af.fast_track_multiplier=1 \
 audio.deep_buffer.media=true \
 audio.offload.disable=1 \
 audio.offload.min.duration.secs=30 \
-
 ro.config.media_vol_steps=25 \
 ro.config.vc_call_vol_steps=7 \
 audio.offload.video=false \
@@ -126,8 +125,8 @@ persist.loc.nlp_name=com.qualcomm.location \
 ro.gps.agps_provider=1
 
 # Media
-PRODUCT_PROPERTY_OVERRIDES += \ 
-debug.sf.enable_hwc_vds=1 \ 
+PRODUCT_PROPERTY_OVERRIDES += \
+debug.sf.enable_hwc_vds=1 \
 media.msm8956hw=0 \
 mm.enable.smoothstreaming=true \
 mmp.enable.3g2=true \
